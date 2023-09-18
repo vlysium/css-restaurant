@@ -9,11 +9,12 @@
   --color-red: hsl(4, 80%, 59%);
   --color-black: hsl(221, 29%, 16%);
   --color-white: hsl(220, 17%, 97%);
-  --color-gray: hsl(220, 15%, 85%);
+  --color-gray: hsl(220, 15%, 88%);
 }
 
 html {
   font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -105,6 +106,38 @@ nav a:hover:not(.current) {
 }
 /* #endregion home-page */
 
+/* #region food-menu */
+#menu-page article {
+  display: inline-block;
+  padding: 1rem;
+  background-color: var(--color-gray);
+  border-radius: 1rem;
+  margin: 1rem;
+  vertical-align: middle;
+}
+
+#menu-page article h2 {
+  display: inline-block;
+}
+
+#menu-page article img {
+  border-radius: 0.5rem;
+  display: block;
+  float: right;
+}
+
+#menu-page article p:last-child {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: 4px solid var(--color-black);
+  margin-top: 0.5rem;
+}
+/* #endregion food-menu */
+
 /* #region footer */
 footer {
   text-align: center;
@@ -121,8 +154,19 @@ footer {
     text-align: left;
   }
   /* #endregion header */
+
+  /* #region food-menu */
+  #menu-page article {
+    width: 100%;
+  }
+
+  /* #endregion food-menu */
 }
 
-@media screen and (min-width: 768px) {
-
+@media screen and (min-width: 1024px) {
+  /* #region food-menu */
+  #menu-page article {
+    width: calc(50% - 2.25rem);
+  }
+  /* #endregion food-menu */
 }
